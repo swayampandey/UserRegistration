@@ -5,17 +5,17 @@ import java.util.regex.*;
 
 public class UserRegistration {
 
-    public void validLastName(){
+    public void validEmailId(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your last name :");
-        String name = sc.next();
-        Pattern P = Pattern.compile("[A-Z][]a-z]{3}");
-        Matcher m = P.matcher(name);
-        if(m.find() && m.group().equals(name)){
-            System.out.println("Valid last name");
+        System.out.println("Enter your email id :");
+        String id = sc.next();
+        Pattern P = Pattern.compile("[a-zA-z0-9][a-zA-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-z]+)+");
+        Matcher m = P.matcher(id);
+        if(m.find() && m.group().equals(id)){
+            System.out.println("Valid email id");
         }
         else{
-            System.out.println("Invalid last name");
+            System.out.println("Invalid email id");
         }
 
     }
