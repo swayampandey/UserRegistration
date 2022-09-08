@@ -4,7 +4,7 @@ public class UserRegistrationMain {
 
     public static void main(String[] args) {
 
-        UserRegistration password = new UserRegistration();
-        password.validPassWord();
+        UserRegistration emailId = new UserRegistration();
+        emailId.validSampleEmail();
     }
 }
