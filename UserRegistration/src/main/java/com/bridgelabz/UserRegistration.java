@@ -5,17 +5,17 @@ import java.util.regex.*;
 
 public class UserRegistration {
 
-    public void validEmailId(){
+    public void validMobileNo(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your email id :");
-        String id = sc.next();
-        Pattern P = Pattern.compile("[a-zA-z0-9][a-zA-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-z]+)+");
-        Matcher m = P.matcher(id);
-        if(m.find() && m.group().equals(id)){
-            System.out.println("Valid email id");
+        System.out.println("Enter your mobile number :");
+        String number = sc.next();
+        Pattern P = Pattern.compile("(0|91)?[6-9][0-9]{9}");
+        Matcher m = P.matcher(number);
+        if(m.find() && m.group().equals(number)){
+            System.out.println("Valid mobile number");
         }
         else{
-            System.out.println("Invalid email id");
+            System.out.println("Invalid mobile number");
         }
 
     }
