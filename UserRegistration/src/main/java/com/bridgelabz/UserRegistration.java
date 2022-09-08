@@ -5,17 +5,17 @@ import java.util.regex.*;
 
 public class UserRegistration {
 
-    public void validMobileNo(){
+    public void validPassWord(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your mobile number :");
-        String number = sc.next();
-        Pattern P = Pattern.compile("(0|91)?[6-9][0-9]{9}");
-        Matcher m = P.matcher(number);
-        if(m.find() && m.group().equals(number)){
-            System.out.println("Valid mobile number");
+        System.out.println("Please enter password :");
+        String password = sc.next();
+        Pattern P = Pattern.compile("[a-zA-Z0-9]{8}");
+        Matcher m = P.matcher(password);
+        if(m.find() && m.group().equals(password)){
+            System.out.println("Valid password");
         }
         else{
-            System.out.println("Invalid mobile number");
+            System.out.println("Invalid password");
         }
 
     }
