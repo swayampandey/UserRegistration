@@ -4,7 +4,7 @@ public class UserRegistrationMain {
 
     public static void main(String[] args) {
 
-        UserRegistration firstName = new UserRegistration();
-        firstName.validFirstName();
+        UserRegistration lastName = new UserRegistration();
+        lastName.validLastName();
     }
 }
